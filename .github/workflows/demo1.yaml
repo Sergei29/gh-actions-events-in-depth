@@ -1,6 +1,6 @@
 name: Test Project
 on:
-  pull-request:
+  pull_request:
     types:
       - opened
   workflow_dispatch:
