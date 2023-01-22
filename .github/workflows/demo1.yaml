@@ -4,8 +4,16 @@ on:
     types:
       - opened
   workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'dev-*'
+      - 'feat/**'
+      - 'updated-*'
+    paths-ignore:
+      - '.github/workflows/*'
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Output event info
